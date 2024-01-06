@@ -1,0 +1,42 @@
+List of things I don't know, but need to know:
+
+-certain html tags aparently indicate that the text is important, find out which and what importance means
+-I need to learn all of the text modification tags, or the common ones:
+	-em,span,strong,mark,b,i,cite,ol,li(and settings),table,tr,th,caption,nav,section,article,header,input,embed,style,link
+	-strong: styles the text in bold, q: puts quotation marks around text, input: 
+	-form: allows for easy setup of a submission form. 
+		-input: 
+			*type: a 
+			*name: if you name several buttons the same thing, then you will only be able to click one of them at a time. 
+		-label: 
+			*for: designate to an id of another element
+
+-forms
+	-do they indent over a bit?
+	-what type of input option only allows the user to choose one radio button of many. 
+
+-css
+	-settings: border-radius,padding(if three parameters are defined, what is what?),border,margin,border,
+		-grid-template-columns: 1fr 2fr 3fr ? 
+	-p:disabled {width:100px;...}   what is this thing? only styling certain instances of p?
+	-#one.two {}
+	-class vs id
+	-selectors # : :: . @ ~ * +
+		-selector system constants: first-child, last-child, nth-last-child(2),hover,focus,active,link,visited,unvisited
+		-@media only screen and (min-width: 600px){
+	-units: px,vw,rem,em,vmin,ch,ex,vh
+	-animations 
+-index.html files; I think they work as a default, but I'm not sure exactly how. 
+-"container tag" vs "empty tag", I think this is the <br> vs <p></p>, one applies something to a whole set of stuff and the other stands alone as a function. 
+-"attribute" of a tag, what is it? is it the same as a css property?
+-xml, what the fuck is this.
+-responsive design vs. adaptive layouts
+-what are polygon hotspots used for
+-boostrap
+	-composer setting?
+	-in a certain installation of boostrap you can avoid bundling boostrap with the source code
+
+-dev tools
+	-firefox edit cookies?
+
+**side note, look through some philosohy beginners reading lists**

@@ -1,0 +1,65 @@
+<section> - no inherent attributes, supports global attributes and events, like everything? 
+<em>,<i>,<cite> all italicize text
+according to gpt there are 7 types of tags: 
+	- structural(semantic) tags: header,footer,nav,section,article,aside
+	- text content tags: h1, p, ol, ul , li, blockquote
+	- Inline text semantic tags: strong, em, mark, small
+	- interactive tags: a, button, input, form
+	- multimedia and embedded content tags: img, audio, canvas
+	- scripting tags: script, noscript, style
+	- table tags: table, tr, th, td
+<em> - italicized, means emphasized pronunciation when spoken. 
+<strong> - bolded, means the text is important
+<cite> - italized, used for titles
+<mark> - highlighted yellow, important content
+<b> - bolded, means text needs attention
+<i> - italized, means alternative voice
+<u> - underlined, the content should appear differnt from normal text, like mispelled
+<code> - used for code
+<kbd> - used for keyboard
+<var> - define a variable in computer programs
+<sample> - sample output of computer programs
+<ul> - unordered list, bullet points for list items
+	-attributes:
+		-style="list-style-type:square" black square for list items,
+	-child elements: <li> in nested ul's the nested ul points are not filled in with black, but empty. 
+<ol> - ordered list, 
+	- attributes: 
+		-type="1":numbers(default),"A":uppercase letters,"a","I":uppercase roman numerals,"i": lowercase
+		-style="list_style-type:lower-greek" greek alphabet
+	- children tags: 
+		-<li> this is the only valid child element
+<table> - allows you to organize things as a table
+	- children
+		-<tr> all row data here
+			-children
+				-<th> table header
+				-<td> table data
+					-attributes rowspan="num" makes the row span into the next num-1 rows as well
+						-colspan="" as well spans the data to the next cols
+		-<caption> describe the table content, must follow opening table tag.
+		-<thead>,<tbody>,<tfoot> - these don't effect structure but can be used by browsers to allow table sections to be scrolled independently. 
+		
+jpeg- cannog support transparent, true(24bit) color,lossy compression
+png- can support transparent graphics, true color, lossless comp
+		
+gif- uses 8bit color, supports animation,lossless comp
+favicon - little logo on browser tabs
+	-define with <link rel="icon" href="favicon.png">
+
+<a> - defines clickable links, has semantic meaning 
+	- absolute url vs relative url
+		- if you don't specify www. emailto: etc. and just put test.html, it is relative to the current html page's path. 
+		- you can put an # before your href text and it will take you to the specified section of the webpage. 
+			-the id attribute acts as the fragment identifier
+	- href = 
+		has a bunh of possible prefixes to the url data. 
+			mailto:
+			http:
+			https:
+			ftp:
+			file:
+
+containers: this refers to the parent child relation on elements
+	- block elements - fill the witdth of the container, can contain more blocks and inline elements
+	-examples: header,footer,address,main,section,article,nav,aside,div,span

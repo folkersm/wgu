@@ -1,0 +1,8 @@
+you have a global config, which applies to the whole computer.
+you also have a local config, which applies to a specific repository.
+   - these override global settings
+
+you can configure:
+	default editor
+	aliases for complex commands.
+

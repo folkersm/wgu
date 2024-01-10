@@ -12,7 +12,6 @@ List of things I don't know, but need to know:
 			*for: designate to an id of another element
 
 -forms
-	-do they indent over a bit?
 	-what type of input option only allows the user to choose one radio button of many. 
 
 -css

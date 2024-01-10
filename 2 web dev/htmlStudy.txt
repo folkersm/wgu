@@ -59,7 +59,108 @@ favicon - little logo on browser tabs
 			https:
 			ftp:
 			file:
+	attributes:
+		target="_blank" opens in a new tab/window, default opens in current tab. 
 
 containers: this refers to the parent child relation on elements
 	- block elements - fill the witdth of the container, can contain more blocks and inline elements
+		-<div> is the generic block element
+	-inline elemente - fill the minimum space possible in parent element
+		-<span> is the generic inline element
+		-cannot contain block elements
+		-non-standard programmer named elements are by default inline
 	-examples: header,footer,address,main,section,article,nav,aside,div,span
+
+<form>: allows you to use html to communicate with a server
+	- action attribute: ex. action="https://twitter.com/status"
+	- enctype="multipart/form-data" this attribute will send POST request string queries in multiple messages
+	- method attribute: ex. method="POST", GET is the default
+		-GET this sends a query string with all the values from the form, in the form of:
+			-query string: a set of name=value pairs seperated by &
+			-the get request makes a url by concatenating the url with the query string with a question mark between them
+			-the page is updated with the response from the server, once the server recieves the request
+		-POST does the same thing as GET 
+	-when data is sent that has special meaning , the form escapes the characters
+	<label>
+		attributes
+			for="" enter the id of the attribute you want to label
+	<textarea> 
+		attribures
+			rows="4",cols="44" specify size of text area
+	<input> creates a textbox area, one line of text
+
+widgets:
+	input is a general widget element, by default it is a textbox
+		attributes: 
+			type = {radio, checkbox,button,password}
+				button, this can use a picture as the clickable
+			maxlength, limits the number of characters in a text box or password field
+	select is used for dropdown selection
+		option, this is the child element for select, uses the text in the browser as the value, or you can set value manually
+			attributes: value
+		attributes: multiple: it doesn't need to be set to a value, just write multiple in the list of attributes. 
+	fieldset
+		attributes:
+		legend, child element used to describe the fieldset
+		input
+		
+<audio> this will play audio in browser, it has a child element called source, which has an attribute, src, that you put a link to the sound file. 
+		AAC and mp3 are the most common audio file types. Old browsers didn't support audio and you used to have to use a plugin to make it work.
+		attributes: autoplay, loop, mute
+
+<video> similar to audio
+	attributes: autoplay, controls, loop, muted, width
+	
+attributes should all be lowercase
+
+CSS
+	ex:
+		span {
+			color:green;
+			fond-size: 16pt;
+		}
+			selector: span
+			property: font-size
+			value: 16pt
+			delaration block: color:green; font-size: 16pt;
+	
+	inline style:
+		declare a property-value relation in the style attribute of a element
+		
+	embedded stylesheet
+		this is when you define your css in a style block of the same page
+	external stylesheet
+		using <link href="styles.css" rel="stylesheet"> to link to another doc that is your css
+
+	in case of parent child conflicts the child's sytle is used
+	in case an inline conflicts with an embedded style, the inline is used.
+	use !important after a declaration in an embedded style sheet to make it override inline syle
+	style="color:inherit" this makes the element take that style value from the parent element. 
+	
+	types of selectors:
+		element: this is default and doesn't use a prefix symbol
+		class: uses .example applies to elements with the attribute: class="example"
+			when designating an element to a class, use class = "one two" to assign it to class one and two
+		id: uses #example and applies to elements whose id="example"
+		descendant: uses ex1 ex2 {declations}. applies to ex2's when ex2 is a child element of ex1 
+		direct descendant: uses ex1>ex2 applies to only direct descendants
+		pseudo-class: uses :hover is used to select elements under the mouse cursor.
+		universal selector: uses * selects everything
+		multiple selector: use a,b {declarations} applied to each element a,b
+		general sibling: a ~ b {declarations} applied to b if it is the descendant of the same element and it appears at any point after the a element
+		adjacent sibling select: a + b {} applied when b and a share the same direct parent and b follows directly after a. 
+		attribute selector: 
+	
+	types of properties:
+		float
+		flex: 0 1 20% flex-grow flex-shrink flex-basis
+			1 in either flex-grow or flex-shrink mean that 
+		width - defines width of element, 
+		
+	
+	
+css boarder radius property
+::first-child - when this :: appears it designates a pseudo-element, when : appears after a css element, p: , it means a pseudo-class.
+
+@media all
+

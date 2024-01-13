@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <style>
+	
+		#grid-container {
+			width: 800px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr auto;
+			<!-- gap: 0px 10px; -->
+			justify-content: space-around;
+			align-content: center;
+		}
+		#grid-container > div {
+		   text-align: center;
+		   background: lightgreen;
+		   border: 3px solid green;
+		   padding: 20px;
+		}
+		#grid-item-c { 
+			grid-row: 1 / 4;
+		}
+		#a {
+			position: fixed;
+			left: 30px;
+			top: 30px;
+			background-color: red;
+			padding: 20px 50px 100px 200px;
+		}
+		p {	color: red;
+			border: solid 2px #222200;
+		}
+		@media screen and (max-width: 700px){
+		body {
+			background-color: purple;
+		}
+		p {color: white;
+		background-color: red;}
+	}
+	@media screen and (min-width:700px) {
+		p {
+			color: black;
+			background-color: yellow;
+		}
+	}
+		#content {
+			border: solid 2px blue;
+			color: blue;
+			position: relative;
+			left: 200px;
+			top: 10px;
+		}
+		img {
+		position: absolute;
+   left:10px;
+
+}
+
+.words {
+   font-family: impact;
+   font-size: 60px;
+}
+
+.first {
+   position: absolute;
+   z-index: 2;
+         left:110px;
+      top: 480px;
+}
+
+.heart {
+   color: red; 
+   font-size: 80px;
+   position: absolute;
+   z-index: 2;
+      left:130px;
+      top: 480px;
+
+}
+
+.last {
+   position: absolute;
+   z-index: 2;
+   left:120px;
+   top: 540px;
+
+}
+#rainbow-gradient {
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(red, orange 30%, yellow, green, blue, purple 90%);
+    border: 15px solid transparent; /* Set a transparent color for the border */
+    border-image: url(https://static-resources.zybooks.com/static/borderv2.png) 30 round;
+    padding: 15px;
+}
+#animation-change-square-color {
+	width: 400px;
+	height: 20px;
+	background-color: orange;
+	animation-name: black-to-blue;
+	animation-duration: 5s;
+	animation-delay: 2s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 2;
+	animation-direction: reverse;
+}
+#animation-change-square-color2 {
+	width: 400px;
+	height: 20px;
+	background-color: orange;
+	animation-name: black-to-blue;
+	animation-duration: 5s;
+	animation-delay: 2s;
+	animation-timing-function: cubic-bezier(-1,1,-1,1);
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+}
+#animation-change-square-color3 {
+	width: 400px;
+	height: 20px;
+	background-color: orange;
+	animation-name: black-to-blue;
+	animation-duration: 5s;
+	animation-delay: 2s;
+	animation-timing-function: cubic-bezier(1,1,1,1);
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+}
+#animation-transition {
+	transition: opacity 2s;
+}
+#animation-transition:hover {
+	opacity: 0;
+}
+#animation- {
+	
+}
+#animation- {
+	
+}
+#animation- {
+	
+}
+@keyframes black-to-blue {
+	from {background-color: black; width: 400px; height: 20px;}
+	to {background-color: blue; width: 100px; height: 80px;}
+	}
+#welcome {
+   margin: 20px;
+   font: 20pt arial;
+   text-align: center;
+   animation-name: move-text;
+   animation-duration: 2s;
+}
+@keyframes move-text {
+   0% {transform: translate(-400px,0px);}
+   50% {transform: translate(60px,0px);}
+   100% {transform: translate(0px,0px);}
+   }
+
+    </style>
+  </head>
+  <body>
+  <div id="welcome">Enter the exciting world of fantasy sports!</div>
+<p id = "animation-transition">don't tuoch me, i'm sensitive </p>
+<p> end of transition</p>
+<div style="height : 500;position: absolute;">animations
+<div id = "animation-change-square-color">animation content orange then black to blue</div>
+<div id = "animation-change-square-color2">animation content orange then black to blue 2</div>
+<div id = "animation-change-square-color3">animation content orange then black to blue 3</div>
+<div id = "animation-">animation content </div>
+<div id = "animation-">animation content </div>
+<div id = "animation-">animation content </div>
+<div id = "animation-">animation content </div>
+<div id = "animation-">animation content </div>
+<div id = "animation-">animation content </div> 
+</div>
+<p> end of animations </p>
+  <div id = "rainbow-gradient">this is it, the place. </div>
+	<div id="grid-container">
+		<div>1</div>
+		<div>2</div> 
+		<div id = "grid-item-c">3</div>
+		<div>4</div>
+		<div>
+		<div>a</div>
+		<div>b</div>
+		<div>c</div>
+		</div>
+		<div >6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+	</div>
+	<p>para 1</p>
+	<p id = "a">para 2</p>
+	<p>para 3</p>
+	<div>Before</div>
+	<div id="content">Content</div>
+	<div>After</div>
+	<span class="first words">I</span>
+<span class="heart">&hearts;</span>
+<span class="last words">NY</span>
+
+<!-- <div> -->
+   <!-- <img src="https://resources.zybooks.com/WebProgramming/tshirtv1.png" alt="White t-shirt"> -->
+<!-- </div> -->
+
+
+
+
+  </body>
+</html>

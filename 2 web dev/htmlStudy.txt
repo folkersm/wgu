@@ -157,10 +157,75 @@ CSS
 			1 in either flex-grow or flex-shrink mean that 
 		width - defines width of element, 
 		
+	border-radius
+		four numbers as possible parameters, one number applies to the curve to all sides with that value,
+		adding a second number applies the new number to the top right and bottom left corners
+		adding a third applies the new value to the bottom right
+		adding a fourth value applies the newest value to the bottom left. 
 	
 	
-css boarder radius property
+	
+	animations
+		you can create animations through non-css libraries like jquery and canvas, but css has inbuilt animation tools
+		css animation transforms an elements styles over a set amount of time to produce animations. 
+			so no js code
+			more optimized
+			better browser control by allowing the browser to stop animations from running on tabs that aren't visible. 
+		use the @keyframe rule to define a css animation.
+		use from {some intitial style} to {some target style} to pick what transistion the animation will contorl
+		or use 0% {*initial property*} 100% {*end property*}
+		animations must have a 
+			animation-name, defined as a property in the tags that will be animated
+			animatoin-duration, must be positive value;
+		additional animation properties:
+			animation-timing-function: 
+				
+		use animation: property to include all of your animation properties in one line	
+			name, duration, function, delay, iterations, direction
+	
+	transitions
+		these execute when the elements property is changed, instead of a particular time.
+		less control over animation
+		ex. transition: width 1s, height 1s; anytime the elements width or height is changed it will make that change over one second
+		there are also related properties:
+			transition-timing-function: this works like animation timing functions
+			transition-delay: like animation delay
+	transformations
+		alters position or shape of an element
+		ex. transform: translate(30px, -10px) slides element over 30 px to the right, 10 up
+		three properties of transform:
+			translate(x,y)
+			scale(x,y)
+			rotate(angle) uses 10deg, deg as a unit
+	
+	
+	
+hwo to design for different devices:
+	graceful degradation: start from desktop and slowly decrease feature count as the screen size decreases
+	progressive enhancement: develope a mobile first site, that adds features when screen grows
+	
+	to detect media types use media queries:
+		media type: all, print, and screen
+		media feature: aspect-ratio, height, and orientation. 
+		ex. 
+			@media screen and (max-width: 500px) {
+				p {background-color: red;}
+			}// this would change the background color to red for all p elements on screen sizes less than 500 px.
+			a normal 
+				p {background-color: blue;} // will override any media query background changes, so the p's will always be blue.
+			
+		a breakpoints are the numerical values used in media queries that 'break' the page by reformating at that parameter value.
+			you must include this line of code for breakpoints to work properly:
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+boostrap:
+	
+	
+fun-fact: it isn't well known which font provides for the best reading experience, but there is a big debate between the sarif camp and the sans-sarif camp, the sarif being the little overhangs embelished on the ends of letter lines. 
+
+
+
 ::first-child - when this :: appears it designates a pseudo-element, when : appears after a css element, p: , it means a pseudo-class.
 
-@media all
 

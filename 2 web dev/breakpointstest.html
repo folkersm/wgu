@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>breakpoint practice</title>
+
+<style>
+
+body {
+   margin: 0;                  
+   font-size: 2.5em;
+   display: grid;
+   grid-template-columns: auto;
+   grid-template-rows: 50px 100px 200px 100px 50px;
+   grid-template-areas: "head" "nav" "main" "aside" "foot";     
+}
+
+header, nav, main, aside, footer {
+   text-align: center;
+}
+
+header {
+   grid-area: head;
+   background: cornflowerblue;
+}
+
+nav {
+   grid-area: nav;      
+   background: khaki;
+}
+
+main {
+   grid-area: main;      
+   background: darkseagreen;
+}
+
+aside {
+   grid-area: aside;      
+   background: goldenrod;
+}
+
+footer {
+   grid-area: foot;      
+   background: thistle;
+}
+@media all and (min-width: 600px) {
+   body {
+      grid-template-columns: 200px auto;
+      grid-template-rows: 50px 150px 150px 50px;    
+      grid-template-areas: 
+         "head head" 
+         "nav main"
+         "aside main"
+         "foot foot";
+   }
+}
+@media all and (min-width: 800px) {
+   body {         
+      grid-template-columns: 200px auto 200px;
+      grid-template-rows: 50px 300px 50px; 
+      grid-template-areas: 
+         "head head head" 
+         "nav main aside"
+         "foot foot foot";
+   }
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+<body>
+   <header>Header</header>
+   <nav>Nav</nav>
+   <main>Main</main>
+   <aside>Aside</aside>
+   <footer>Footer</footer>
+</body>
+</html>
